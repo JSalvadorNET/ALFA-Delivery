@@ -1,0 +1,176 @@
+h2{
+
+	margin-top: 60px;
+	margin-left: 120px;
+}
+
+h3{
+
+
+	margin-top: 30px;
+	margin-left: 120px;
+
+}
+
+.section-total{
+	display: flex;
+}
+
+.tot{
+	font-size: 25px;
+	font-weight: bold;
+	color:#40e637;
+
+	margin-top: 30px;
+	margin-left: 120px;
+}
+
+.tot1{
+	margin-top: 30px;
+	font-size: 25px;
+	font-weight: bold;
+	color:#40e637;
+	margin-left: 10px;
+}
+
+
+.end{
+
+	font-size: 20px;
+	font-weight: bold;
+	color:#b973d9;
+	margin-top: 30px;
+	margin-left: 120px;
+}
+
+#finalizar1, #finalizar2, #finalizar3, #acomp{
+	margin-top: 30px;
+	text-decoration:none;  top: 10px;
+	right: 10px;
+	width: 250px;
+	height: 40px;
+	font-weight: bold;
+	background: #40e637;
+	font-size: 15px;
+	text-transform: uppercase;
+	text-align: center;
+	border:2px solid #40e637;
+	color: #eee;
+	text-align: center;
+	border-radius: 15px;
+	margin-left:100px;
+	cursor: pointer;
+	-webkit-appearance: none; 
+	-moz-appearance: none;
+
+
+}
+
+.tipo-cartao{
+
+    margin-top: 5px;
+	display: block;
+	width: 35%;
+	padding: 10px;
+	outline: none;
+	border: 0px solid #aaa;
+	border-radius: 10px;
+	font-size: 100%;
+	margin-bottom: 30px;
+
+}
+
+h4{
+
+	margin-left: 120px;
+}
+
+#select{
+
+	margin-top: 5px;
+	display: block;
+	width: 15%;
+	padding: 10px;
+	outline: none;
+	border: 0px solid #aaa;
+	border-radius: 10px;
+	font-size: 100%;
+	margin-left: 120px;
+	margin-bottom: 30px;
+}
+
+.gif-final{
+
+	display: flex;
+	float: right;
+	margin-right: 60px;
+}
+
+.gif-acom{
+
+width: 20%;
+	display: flex;
+	float: right;
+	margin-right: 60px;
+}
+
+.gif-din{
+
+width: 20%;
+	display: flex;
+	float: right;
+	margin-right: 60px;
+}
+
+.din-troco{
+	
+	margin-left: 10px;
+	width: 10%;
+	padding: 5px;
+	outline: none;
+	border: 0px solid #aaa;
+	border-radius: 10px;
+}
+
+.pix{
+
+	width: 30%;
+	height: 30px;
+	margin-left: 20px;
+	margin-top: 10px;
+	padding: 2px;
+	padding-left: 10px;
+	outline: none;
+	border: 0px solid #aaa;
+	border-radius: 10px;
+}
+
+
+
+.troco{
+	margin-top: 20px;
+	display: flex;
+	margin-left: 120px;
+}
+
+.situacao{
+
+	display: flex;
+
+}
+
+.situacao > img{
+
+	width: 3%;
+	height: 3%;
+	float: right;
+	margin-left: 10px;
+	margin-top: 22px;
+	margin-right: 10px;
+}
+
+.situacao > p{
+
+margin-top: 30px;
+
+}

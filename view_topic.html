@@ -1,0 +1,189 @@
+<!-- <?php
+
+include('protect.php');
+include('protectafilialforum.php');
+
+?>
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="pt-br">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+	<title>Alfa delivery</title>
+	<link href="alfa_css_homeacc.css" rel="stylesheet">
+	<link href="forum.css" rel="stylesheet">
+	<link href="reset_css.css" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+</head>
+<link rel="icon" href="./assets/Alfanavlogo.png">
+
+
+<!-- CORPO - CONTEÚDO -->
+<body>
+
+<!--
+<?php
+include_once('config.php');
+
+
+$id=$_GET['id'];
+
+$sql_code = "SELECT * FROM forum_q WHERE id='$id' ";
+$sql_query = $conn->query($sql_code) or die("Falha na execução do código SQL: " . $conn->error);
+
+
+$rows=mysqli_fetch_array($sql_query);
+?>
+-->
+
+<!-- CABEÇALHO PADRÃO (LOGO + MENU) -->
+
+<header class="cabecalho" id="idCabecalho">
+	<div class="container">
+		<div class="cabecalho__cadastro">
+
+
+			<div class="cabecalho__fundoImagem">
+
+				<img src="./assets/cnt_cli.png" alt="Entrar">
+			</div>
+			<p><a id="conta" href="Alfa_account.html">Cliente</a></p>
+
+			<div class="cabecalho__logoAlfa">
+				<figure>
+					<a href="Alfa_homeCliente.html">
+						<img src = "./assets/alfa_logo.png" alt="Logo Alfa">
+					</a>
+					<figcaption>Logo Alfa</figcaption>
+				</figure>
+			</div>
+
+			<div class="Caixa__pesquisar">
+				<button>
+					<img src="./assets/lupa.png" alt="">
+				</button>
+				<input type="text" >
+			</div>
+		</div>
+	</header>
+	<nav class="linebar">
+		<div class="mobile-menu">
+			<div class="line1"></div>
+			<div class="line2"></div>
+			<div class="line3"></div>
+		</div>
+		<ul class="nav-list">
+			<li><a class="a1" href="Alfa_home.html">Início</a></li>
+			<li><a class="a1" href="#">Recomendados</a></li>
+			<li><a class="a1" href="#">Em promoção</a></li>
+			<li><a class="a1" href="#">Acompanhe aqui!</a></li>
+			<li><a class="a1"  href="usuario.html">Fórum</a></li>
+			<li><a class="a1" href="#">Sobre</a></li>
+		</ul>
+	</nav>
+
+	<h2 class="forum-title-viewtopic">Fórum</h2>
+
+	<div class="view-topic">
+		<table cellpadding="0" cellspacing="1">
+			<tr>
+				<td><table width="100%" cellpadding="3" cellspacing="1">
+					<tr>
+						<img class="topico-user" style=" border-radius: 50%;" src="./assets/icone_conta.png"> <!--<?php echo $rows['foto_perfil']; ?>-->
+
+						<td class="borda3"><strong>Autor:</strong> 
+<!-- <?php  echo empty($rows['name']) ? $rows['name'] : "$rows[name]";?><br>
+<?php  echo empty($rows['CRMProfissional']) ? $rows['CRMProfissional'] : "CRM: $rows[CRMProfissional]";?> <br>
+<?php echo empty($rows['AreaProfissional']) ? $rows['AreaProfissional'] : "Área: $rows[AreaProfissional]";?><br>
+<?php echo empty($rows['InstitutoProfissional']) ? $rows['InstitutoProfissional'] : "Instituto: $rows[InstitutoProfissional]";?><br>
+<img style="width: 300px;" src="<?php echo $rows['imagem']; ?>">--></td> 
+
+
+<td class="borda3"><strong><p>Tópico: <p><?php echo $rows['topic']; ?></p></p></strong></td>
+</tr>
+<tr>
+	<td class="borda3"><p style="color:#8973d9;">Detalhes: 
+		<p><?php echo $rows['detail']; ?></p></p></td>
+	</tr>
+
+	<tr>
+
+
+	</tr>
+
+	<tr>
+		<td class="borda3"><strong>Data/Hora : </strong><!-- <?php echo $rows['datetime']; ?> --></td>
+	</tr>
+</table></td>
+</tr>
+</table>
+</div>
+
+<br />
+<!--
+<?php
+
+
+$sql_code2 = "SELECT * FROM forum_res WHERE question_id='$id' ";
+$sql_query_r = $conn->query($sql_code2) or die("Falha na execução do código SQL: " . $conn->error);
+
+
+while($rows=mysqli_fetch_array($sql_query_r)){
+?> -->
+<h3 class="forum-title-coment">Comentar</h3>
+
+
+<!-- <?php
+} ?>
+-->
+
+<table width="400" border="0" align="center" cellpadding="0" cellspacing="1" class="borda2">
+	<tr>
+		<form name="form1" method="post" id="res" enctype="multipart/form-data" action="add_res.php">
+			<td>
+
+				<tr>
+					<td   style="display:none;"valign="top"><strong>Resposta</strong></td>
+
+					<td><textarea name="a_answer" cols="45" rows="3" id="a_answer" ></textarea></td>
+				</tr>
+
+			</table>
+		</td>
+		<tr>
+			<tr>
+				<td valign="top"><h4 class="forum-title-coment"><strong>Imagem (Opcional)</strong></h4></td>
+				<td>
+				</tr>
+			</td>
+			<div>
+				<label for="arquivo"  class="resp-imgtitle" >Adicionar Imagem</label>
+				<input  type="file" name="arquivo" id="arquivo" required>
+			</div>
+
+			<div class="btn-topico-space">
+				<td><input class="btn-topico" name="id" type="hidden" value="<?php echo $id; ?>"/></td>
+
+				<td><input class="btn-topico" type="button" name="Submit" onclick="validaForm5 ()" value="Enviar"/> 
+
+					<input  class="btn-topico" type="reset" name="Submit2" value="Limpar"/>
+				</td>
+			</td>
+		</tr>
+	</form>
+</tr>
+</table>
+
+<script type="text/javascript" src="alfa_js.js"> </script>
+
+</main>
+</body>
+</html>
+
+</body>
+</html>

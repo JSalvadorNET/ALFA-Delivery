@@ -1,0 +1,142 @@
+<?php
+include('protectprofissional.php');
+include('protectafilialforum.php');
+
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="forum.css" />
+<script type="text/javascript" src="java.js" charset="ISO-8859"></script>
+<title>T&oacute;picos</title>
+</head>
+<body>
+<?php
+include_once('config.php');
+
+
+$id=$_GET['id'];
+
+$sql_code = "SELECT * FROM forum_q WHERE id='$id' ";
+$sql_query = $conn->query($sql_code) or die("Falha na execução do código SQL: " . $conn->error);
+
+
+$rows=mysqli_fetch_array($sql_query);
+?>
+
+<table width="400" border="0" align="center" cellpadding="0" cellspacing="1" class="borda2">
+<tr>
+<td><table width="100%" border="0" cellpadding="3" cellspacing="1" class="borda4">
+<tr>
+<td class="borda3"><strong><p style="color:crimson;">Tópico: <p><?php echo $rows['topic']; ?></p></p></strong></td>
+</tr>
+
+<tr>
+<td class="borda3"><p style="color:crimson;">Detalhes: <p><?php echo $rows['detail']; ?></p></p></td>
+</tr>
+
+<tr>
+
+<td class="borda3"><strong>Perfil: <img style="width: 50px;border-radius: 50%;" src="<?php echo $rows['foto_perfil']; ?>">
+<?php  echo empty($rows['name']) ? $rows['name'] : "$rows[name]";?><br>
+<?php  echo empty($rows['CRMProfissional']) ? $rows['CRMProfissional'] : "CRM: $rows[CRMProfissional]";?> <br>
+<?php echo empty($rows['AreaProfissional']) ? $rows['AreaProfissional'] : "Área: $rows[AreaProfissional]";?><br>
+<?php echo empty($rows['InstitutoProfissional']) ? $rows['InstitutoProfissional'] : "Instituto: $rows[InstitutoProfissional]";?><br>
+<img style="width: 300px;" src="<?php echo $rows['imagem']; ?>">
+</td> 
+</tr>
+
+
+<tr>
+<td class="borda3"><strong>Data/Hora : </strong><?php echo $rows['datetime']; ?></td>
+</tr>
+</table></td>
+</tr>
+</table>
+<br />
+<?php
+
+
+$sql_code2 = "SELECT * FROM forum_res WHERE question_id='$id' ";
+$sql_query_r = $conn->query($sql_code2) or die("Falha na execução do código SQL: " . $conn->error);
+
+
+while($rows=mysqli_fetch_array($sql_query_r)){
+?>
+<table width="400" border="0" align="center" cellpadding="0" cellspacing="1" class="borda2">
+<tr>
+<td><table width="100%" border="0" cellpadding="3" cellspacing="1" class="borda1">
+<tr>
+<td class="borda3"><strong>ID</strong></td>
+<td class="borda3"><?php echo $rows['a_id']; ?></td>
+<td class="borda3"><?php  echo empty($rows['a_crm']) ? $rows['a_crm'] : "CRM: $rows[a_crm]";?> <br>
+<?php echo empty($rows['a_area']) ? $rows['a_area'] : "Área: $rows[a_area]";?><br>
+<?php echo empty($rows['a_instituto']) ? $rows['a_instituto'] : "Instituto: $rows[a_instituto]";?>
+
+</td>
+</tr>
+
+<tr>
+
+<td width="18%" class="borda3"><strong>Perfil</strong></td>
+<td width="5%" class="borda3"><img style="width: 50px;border-radius: 50%;" src="<?php echo $rows['foto_perfil']; ?>"></td>
+<td width="77%" class="borda3"><?php echo $rows['a_name']; ?></td>
+</tr>
+
+<tr>
+    <td class="borda3"></td>
+    <td class="borda3"></td>
+    <td class="borda3"><img style="width: 300px;" src="<?php echo $rows['a_imagem']; ?>"></td>
+</tr>
+
+<tr>
+<td class="borda3"><strong>Resposta</strong></td>
+<td class="borda3">:</td>
+<td class="borda3"><?php echo $rows['a_answer']; ?></td>
+</tr>
+<tr>
+<td class="borda3"><strong>Data/Hora</strong></td>
+<td class="borda3">:</td>
+<td class="borda3"><?php echo $rows['a_datetime']; ?></td>
+</tr>
+</table></td>
+</tr>
+</table><br />
+
+<?php
+} ?>
+
+<br />
+<table width="400" border="0" align="center" cellpadding="0" cellspacing="1" class="borda2">
+<tr>
+<form name="form1" method="post" id="res" enctype="multipart/form-data" action="add_res_profissional.php">
+<td>
+<table width="100%" border="0" cellpadding="3" cellspacing="1" class="borda1">
+
+<tr>
+<td valign="top"><strong>Resposta</strong></td>
+<td valign="top">:</td>
+<td><textarea name="a_answer" cols="45" rows="3" id="a_answer" ></textarea></td>
+</tr>
+
+<tr>
+<td valign="top"><strong>Imagem (Opcional)</strong></td>
+<td valign="top">:</td>
+<td><input type="file" name="imagem"></td>
+</tr>
+
+<tr>
+<td>&nbsp;</td>
+<td><input name="id" type="hidden" value="<?php echo $id; ?>"/></td>
+<td><input type="button" name="Submit" onclick="validaForm5 ()" value="Enviar"/> <input type="reset" name="Submit2" value="Limpar"/>
+<input type="button" name="Submit3" value="Home" onclick="window.location.href='http://projectalfa.com.br/ForumAlfa/profissional.php'"/>
+</td>
+</tr>
+</table>
+</td>
+</form>
+</tr>
+</table>
+</body>
+</html>
