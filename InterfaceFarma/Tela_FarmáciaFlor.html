@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+	<title>Alfa delivery</title>
+	<link href="../alfa_css_homeacc.css" rel="stylesheet">
+	<link rel="stylesheet" href="../carrinho.css">
+	<link href="../categoria.css" rel="stylesheet">
+	<link href="../reset_css.css" rel="stylesheet">
+	<link href="../Alfa_css_footer.css" rel="stylesheet">
+	<link href="./Tela_farma.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+
+
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+</head>
+<link rel="icon" href="../assets/Alfanavlogo.png">
+
+
+<!-- CORPO - CONTEÚDO -->
+<body>
+
+	<!-- CABEÇALHO PADRÃO (LOGO + MENU) -->
+
+	<header class="cabecalho" id="idCabecalho">
+		<div class="container">
+			<div class="cabecalho__cadastro">
+
+
+				<div class="cabecalho__fundoImagem">
+
+					<img src="../assets/cnt_cli.png" alt="Entrar">
+				</div>
+				<p><a id="conta" href="../Alfa_account.html">Cliente</a></p>
+
+
+
+
+				<div class="cabecalho__logoAlfa">
+					<figure>
+						<a href="../Alfa_homeCliente.html">
+							<img src = "../assets/alfa_logo.png" alt="Logo Alfa">
+						</a>
+						<figcaption>Logo Alfa</figcaption>
+					</figure>
+				</div>
+
+				<div class="Caixa__pesquisar">
+					<button>
+						<img src="../assets/lupa.png" alt="">
+					</button>
+					<input type="text" >
+				</div>
+			</div>
+		</header>
+		<nav class="linebar">
+			<div class="mobile-menu">
+				<div class="line1"></div>
+				<div class="line2"></div>
+				<div class="line3"></div>
+			</div>
+			<ul class="nav-list">
+				<li><a class="a1" href="../Alfa_homeCliente.html">Início</a></li>
+				<li><a class="a1" href="#">Recomendados</a></li>
+				<li><a class="a1" href="#">Em promoção</a></li>
+				<li><a class="a1" href="#">Acompanhe aqui!</a></li>
+				<li><a class="a1"  href="usuario.html">Fórum</a></li>
+				<li><a class="a1" href="#">Sobre</a></li>
+			</ul>
+		</nav>
+
+
+
+
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" id="closebtn">&times;</a>
+			<div class="secaoCarrinho__conteudo">
+				<!-- LISTA DE ITENS NO CARRINHO -->
+				<ul class="secaoCarrinho__listaItens">
+
+				</ul>
+				<div class="secaoCarrinho__total">
+					<p>Total</p>
+					<span>0,00</span>
+				</div>
+
+				<div class="secaoCarrinho__formaPagamento">
+					<button>Escolher forma de pagamento</button>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="carrinho_icone">
+			<a id="opennav">
+				<div class="carrinho_fundoImagem">
+					<img src="../assets/carrinho.png" alt="Entrar">
+				</div>
+			</a>
+		</div>
+
+		<script>
+			document.getElementById("opennav").addEventListener("click", function() {
+				document.getElementById("mySidenav").style.width = "450px";
+			})
+			document.getElementById("closebtn").addEventListener("click", function() {
+				document.getElementById("mySidenav").style.width = "0";
+				document.getElementById("main").style.marginLeft = "0";
+			})
+		</script>
+
+
+		<div class="fundo_farmacia3"></div>
+
+		<img class="logo_farmacia" src="../assets/Farma3.png">
+
+		<main>
+			<!-- FILTROS -->
+
+			<section class="tags_farmacia2">
+				<p>(21) 964179268</p>
+				<p>12km</a></p>
+				<p>24 Horas</a></p>
+				<p>Mínimo: R$20,00</a></p>
+			</section>
+			<h2>Mais vendidos</h2>
+
+
+			<section class="produtos-section">
+				<div class="produto-link">
+					<ul class="produto"></ul>
+				</div>
+			</section>
+
+			<div class="footer-clean">
+				<footer>
+					<div class="container">
+						<div class="col-lg-3 item social"><a href="#"><i class="icon ion-social-instagram"></i></a>
+							<p class="copyright">Alfa Delivery © 2022</p>
+						</div>
+					</div>
+				</footer>
+			</div>
+
+
+			<script type="text/javascript" src="../alfa_js.js"> </script>
+			<script type="text/javascript">
+
+
+				document.getElementById("opennav").addEventListener("click", function() {
+					document.getElementById("mySidenav").style.width = "550px";
+				})
+
+				document.getElementById("closebtn").addEventListener("click", function() {
+					document.getElementById("mySidenav").style.width = "0";
+					document.getElementById("main").style.marginLeft = "0";
+				})
+
+
+				const menuProdutos = [
+				{
+					id: 2,
+					nome: 'Floral Mockup',
+					preco: 15.50,
+					categoria: 'higiene',
+					imagem: '../assets/remédio2.jpg',
+					farmalink: 'Tela_FarmáciaFlor.html',		
+					farmalogo: '../assets/Farma3.png'
+				},
+
+				{
+					id: 4,
+					nome: 'Remédio Baleco',
+					preco: 5.50,
+					categoria: 'higiene',
+					imagem: '../assets/remedio3.png',
+					farmalink: 'Tela_FarmáciaFlor.html',
+					farmalogo: '../assets/Farma3.png'
+				},
+
+				{
+					id: 9,
+					nome: 'Vitaminas Flex B2',
+					preco: 36.90,
+					categoria: 'higiene',
+					imagem: '../assets/vitamina.png',
+					farmalink: 'Tela_FarmáciaFlor.html',	
+					farmalogo: '../assets/Farma3.png'
+				},
+				{
+					id: 10,
+					nome: 'Cloroxomin 10mg',
+					preco: 14.70,
+					categoria: 'higiene',
+					imagem: '../assets/remedio4.jpg',
+					farmalink: 'Tela_FarmáciaFlor.html',
+					farmalogo: '../assets/Farma3.png'
+				},
+
+
+
+				];
+
+				let listaDestaque = document.querySelector(".produto")
+				let listaCarrinho = document.querySelector('.secaoCarrinho__listaItens');
+
+				const containerTotal = document.querySelector('.secaoCarrinho__total > span');
+
+				function construirLayoutPratos(ulContainer, item, classePrato){
+
+
+					let li = document.createElement("li")
+					let a = document.createElement("a")
+
+					let figure = document.createElement("figure")
+					let link = document.createElement("a")
+					link.href = item.link
+					let img = document.createElement("img")
+					img.className = "produto-imgmn";
+					img.src = item.imagem
+					img.alt = item.nome
+
+					let figcaption = document.createElement("figcaption")
+					figcaption.innerText = item.nome
+
+					let div = document.createElement("div")
+					let h3 = document.createElement("h3")
+					h3.innerText = item.nome
+
+
+					let span = document.createElement("span")
+					span.innerText =  item.preco.toFixed(2) 
+
+					let p = document.createElement("p")
+					p.innerText = "R$"
+
+
+					let a1 = document.createElement("a")
+					a1.href = item.farmalink
+
+					let logo = document.createElement("img")
+					logo.className = "farmalogo";
+					logo.src = item.farmalogo
+
+					let button = document.createElement("button")
+					button.className = "button";
+
+					let spanbtn = document.createElement("span")
+					spanbtn.textContent = 'ㅤ';
+
+					let divbtn = document.createElement("div")
+					divbtn.className = "cart";
+					let svg = document.createElement("svg")
+					svg.setAttribute("viewBox","0 0 36 26")
+
+
+
+					let polyline = document.createElementNS("http://www.w3.org/2000/svg","polyline")
+					polyline.setAttributeNS("polyline","points","1 2.5 6 2.5 10 18.5 25.5 18.5 28.5 7.5 7.5 7.5")
+
+					let polyline1 = document.createElementNS("http://www.w3.org/2000/svg","polyline")
+					polyline1.setAttributeNS("polyline","points","15 13.5 17 15.5 22 10.5")
+
+					li.appendChild(a)
+					button.dataset.id = item.id;
+
+    //MONTANDO IMAGEM
+    link.appendChild(img)
+    figure.appendChild(link)
+    figure.appendChild(figcaption)
+    a.appendChild(figure)
+
+    div.appendChild(h3)
+    div.appendChild(p)
+    div.appendChild(span)
+    div.appendChild(a1)
+    a1.appendChild(logo)
+
+    a.appendChild(div)
+    div.appendChild(button)
+    button.appendChild(spanbtn)
+    button.appendChild(divbtn)
+    divbtn.appendChild(svg)
+    svg.appendChild(polyline)
+    svg.appendChild(polyline1)
+
+    li.classList.add(classePrato)
+    ulContainer.appendChild(li)
+
+    button.addEventListener('click', adicionarNoCarrinho);
+
+    document.querySelectorAll('.button').forEach(button => button.addEventListener('click', e => {
+    	if(!button.classList.contains('loading')) {
+    		button.classList.add('loading');
+    		setTimeout(() => button.classList.remove('loading'), 3700);
+    	}
+    	e.preventDefault();
+    }));
+
+}
+
+for(let cont = 0; cont < menuProdutos.length; cont++){
+	let item = menuProdutos[cont]
+
+	construirLayoutPratos(listaDestaque,item, "secaoPratosDestaque__itemPrato")
+}
+
+function construirLayoutCarrinho(item) {
+	const li = document.createElement('li');
+	const div = document.createElement('div');
+	const h3 = document.createElement('h3');
+	const span = document.createElement('span');
+	const p = document.createElement('p');
+	const button = document.createElement('button');
+
+	h3.innerText = item.nome;
+	span.innerText = item.preco.toFixed(2);
+	button.innerText = 'Remover';
+
+	div.appendChild(h3);
+	div.appendChild(span);
+
+	li.appendChild(div);
+	li.appendChild(button);
+
+	li.classList.add('secaoCarrinho__item');
+
+	listaCarrinho.appendChild(li);
+
+	button.addEventListener('click', removerDoCarrinho);
+}
+
+function adicionarNoCarrinho(evento) {
+
+	const elementoClicado = evento.currentTarget;
+	const idElementoClicado = elementoClicado.dataset.id;
+
+	const pratoSelecionado = menuProdutos[idElementoClicado];
+
+	construirLayoutCarrinho(pratoSelecionado);
+	atualizarTotal();
+}
+
+function removerDoCarrinho(evento) {
+	const elementoClicado = evento.currentTarget;
+	const elementoPai = elementoClicado.parentElement;
+
+	elementoPai.remove();
+	atualizarTotal();
+}
+
+function atualizarTotal() {
+	const listaPrecos = document.querySelectorAll('.secaoCarrinho__item > div > span');
+
+	let total = 0;
+	for(let contador = 0; contador < listaPrecos.length; contador++){
+		const elementoSpan = listaPrecos[contador];
+		const precoNumero = Number(elementoSpan.innerText);
+		total += precoNumero;
+	}
+
+	total = total.toFixed(2);
+	containerTotal.innerText = total;
+}
+
+
+
+</script>
+</main>
+</body>
+</html>
